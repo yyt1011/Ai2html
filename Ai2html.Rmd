@@ -1,0 +1,35 @@
+---
+title: "Ai2html"
+author: "Yutong"
+date: "5/22/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Main website:
+http://ai2html.org/examples.html#custom-css
+
+#How to use it:
+## 1.Save your work;
+     Script -> ai2html
+     Ai2html-output -> filename.html
+## 2.The layout of the html file:
+
+     <div id="filename-box" class="box">
+	
+      *Generally setting up the code of the ai file*
+
+	      <div id=”artboard” class=”artboard” style=”width:x; height:x;”>
+	          	<img id=”artboard_1” class=”” alt src=””>
+		
+		          *Setting the artboard and introducing the png of the artboard, serving as the canvas where you place the text boxes*
+
+              	<div id=”g-ai0_1” style=”top:x; left:x; width:x; margin-left:x;”>
+	                	<p> text <p>
+		
+		                  *Using id tags (ordered numerically) and put the coordination information in the style attribution, the style of the text can be changed in the <style></style> in the <head></head> section of the page*
+
+Main takeaway of this simple function is to explore the png without the texts on it and wrap the texts in the html code so that they won’t be affected by the changing size of the image itself.
